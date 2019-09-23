@@ -1,21 +1,19 @@
 ﻿// Laboratory_1.cpp : Рябов Кирило: 8 Вріант. 
 //
-#include <iostream>        //Підключення бібліотек
+#include <iostream>        //include library
 
 #include "Lab1.h"
-#include "Header.h"
+#include "Header.h"           
 
-using namespace std;        //Підключення пространства імен std
+using namespace std;        //includ namespace of std
 
 int main()
 {
-	setlocale(LC_ALL, "ukr");
+	setlocale(LC_ALL, "ukr"); // rus
 
-	int key = 0;
+	Init start; // pre start programm(initialization of menu)
 
-	Init start;
-
-	start.Start();
+	start.Start(); // start programme
 
 	return 0;
 }

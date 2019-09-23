@@ -4,7 +4,7 @@
 #include <string>
 
 using namespace std;
-
+//create class menu
 class MenuItem
 {
 public:

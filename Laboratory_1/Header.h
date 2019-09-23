@@ -6,12 +6,12 @@
 
 using namespace std;
 
-class Init
+class Init // class for initialization of main menu
 {
 private:
 	Menu menu;
 public:
-	Init()
+	Init() 
 	{
 		menu.AddMenuItem("Задача 8(8 Варiант)", Zadacha8_lab1);
 		menu.AddMenuItem("Задача 9(8 Варiант)", Zadacha9_lab1);
