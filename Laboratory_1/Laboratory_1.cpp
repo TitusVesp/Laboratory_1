@@ -1,9 +1,11 @@
-﻿// Laboratory_1.cpp : Рябов Кирило 
+﻿// Laboratory_1.cpp : Рябов Кирило: 8 Вріант. 
 //
+#include <iostream>        //Підключення бібліотек
 
-#include <iostream>
 #include "Lab1.h"
-using namespace std;
+#include "Header.h"
+
+using namespace std;        //Підключення пространства імен std
 
 int main()
 {
@@ -11,35 +13,10 @@ int main()
 
 	int key = 0;
 
-	int* pkey = &key;
+	Init start;
 
-	int* ppkey = pkey;
+	start.Start();
 
-	*ppkey = 6;
-
-	cout << key;
-/*
-	while (1)
-	{
-		system("CLS");
-
-		cout << "Перша задача: 1;\nДруга задача: 2;\nВийти: 9" << endl;
-
-		cin >> key;
-
-		switch (key)
-		{
-		case 1:
-
-			break;
-		case 2:
-
-			break;
-		default:
-			cout << "Введене некоректне значення!" << endl;
-			break;
-		}
-		system("pause");
-	}*/
+	return 0;
 }
 

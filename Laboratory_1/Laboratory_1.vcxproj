@@ -153,9 +153,12 @@
   <ItemGroup>
     <ClCompile Include="Lab1.cpp" />
     <ClCompile Include="Laboratory_1.cpp" />
+    <ClCompile Include="OOP_Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Lab1.h" />
+    <ClInclude Include="OOP_Menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
