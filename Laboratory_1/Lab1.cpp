@@ -36,7 +36,7 @@ void Zadacha8_lab1() //Solution of Task 8, Variant 8
 void Zadacha9_lab1() //Solution of Task 9, Variant 8
 {
 	cout << " Дано два натуральних числа a та b. Вивести на екран перiод дробу a/b. " << endl;
-	float a = 0, b = 0, temp_res = 0;
+	long double a = 0, b = 0, temp_res = 0;
 
 	int mb_period = 0, count = 0, temp = 1, real_period = 0;
 
@@ -52,13 +52,14 @@ void Zadacha9_lab1() //Solution of Task 9, Variant 8
 		return;
 	}
 
-    long double res = a / b; 
-	res -= (int)res; // transfer from x.xxxx to 0.xxxx
+	double ret = a * double(100000000000000000);
+    long double res = ret / b; 
+	long double res2 = res / 100000000000000000;
 
 	for (int i = 0; i < 15000; i++) // main algorithm of task 9
 	{
 		real_period = 0;
-		temp_res = res;
+		temp_res = res2;
 		temp = 1;
 		count++;
 		for (int j = 0; j < count; j++) temp_res *= 10;
@@ -68,17 +69,22 @@ void Zadacha9_lab1() //Solution of Task 9, Variant 8
 		temp_res -= (int)temp_res;
 		temp_res *= temp;
 
-		if (i % 7 == 0 && i != 0) //check for limitation of C++ by type double
+		if (i % 14 == 0 && i != 0) //check for limitation of C++ by type double
 		{
 			count = 0;
-			res *= 10;
-			res -= (int)res;
+			res2 *= 10;
+			res2 -= (int)res;
 			mb_period = 0;
 			continue;
 		}
 
 		if (mb_period == (int)temp_res) real_period++; //first check of period
 		else continue;
+
+		if (mb_period >= 1000)
+		{
+			break;
+		}
 
 		temp_res -= (int)temp_res;
 		temp_res *= temp;
